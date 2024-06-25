@@ -31,6 +31,6 @@ class Buku {
   // Method toString()
   @override
   String toString() {
-    return 'Buku{id: $id, judul: $judul, penulis: $penulis, dipinjam: $_dipinjam}';
+    return '- $judul ( $penulis )';
   }
 }

@@ -1,10 +1,9 @@
 class Buku {
-  String id;
   String judul;
   String penulis;
   bool _dipinjam = false;
 
-  Buku({required this.id, required this.judul, required this.penulis});
+  Buku({required this.judul, required this.penulis});
 
   bool getDipinjam() {
     return _dipinjam;
@@ -31,6 +30,6 @@ class Buku {
   // Method toString()
   @override
   String toString() {
-    return '- $judul ( $penulis )';
+    return '- buku $judul oleh $penulis (${!getDipinjam() ? "tersedia" : "tidak tersedia"})';
   }
 }

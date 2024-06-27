@@ -122,7 +122,12 @@ class Perpustakaan {
         case '4':
           stdout.write("Masukkan nama buku yang ingin dicari: ");
           var nama = stdin.readLineSync();
-          cariBukuBerdasarkanNama(nama!);
+          Buku? result = cariBukuBerdasarkanNama(nama!);
+          if (result != null) {
+            result.toString();
+          } else {
+            print("Tidak ada buku");
+          }
           break;
         case '5':
           stdout.write("Masukkan judul buku yang ingin ditambahkan: ");
